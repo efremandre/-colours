@@ -1,0 +1,111 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.black {
+	color: #000;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	height: 100vh;
+}
+
+.col {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+}
+
+.title-wrapper {
+	position: relative;
+}
+
+.subtitle {
+	position: absolute;
+	padding: 5px;
+	font-size: 1rem;
+	bottom: -10px;
+	left: calc(50% - 25%);
+	opacity: 0;
+
+	transition: opacity 0.5s;
+}
+
+.active {
+	opacity: 1;
+}
+
+.title,
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	transition: opacity 1s;
+}
+
+.copy-all,
+.button {
+	font-size: 1.4rem;
+	background: transparent;
+	color: inherit;
+	border: none;
+	outline: none;
+}
+
+.copy-all {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding: 10px;
+	background: rgba(148, 147, 147, 0.6);
+	transform: translateY(-80%);
+	transition: transform .6s;
+}
+
+.copy-all:hover {
+	transform: translateY(0%);
+	cursor: pointer;
+}
+
+.flashhingButton {
+	animation-name: visibleButton;
+	animation-duration: 2s;
+}
+
+@keyframes visibleButton {
+
+	0% {
+		transform: translate3d(0, -80%, 0);
+	}
+
+	50% {
+		transform: translate3d(0, 0, 0);
+	}
+
+	100% {
+		transform: translate3d(0, -80%, 0);
+	}
+}
+
+.title:hover,
+.button:hover {
+	cursor: pointer;
+	opacity: .5;
+}
+
+.fa-solid {
+	pointer-events: none;
+}
