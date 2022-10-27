@@ -12,4 +12,3 @@
 [>> Демка <<](https://efremandre.github.io/-colours/)
 
 ![image](https://user-images.githubusercontent.com/25119216/198176593-0c9919fc-fe7b-4d20-8f03-c7ca1a7f0b3c.png)
-
